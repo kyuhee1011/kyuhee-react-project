@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+}
+
+.button {
+    color: black;
+    background: white;
+    padding: .5rem;
+    margin-right: 1rem;
+    border: rgb(51, 143, 89) 2px solid;
+    border-radius: 1em;
+}
+
+.searchButton {
+    border: rgb(51, 143, 89) 2px solid;
+    border-radius: 1em;
+}
