@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-// import Food from "./components/Food";
+import DessertContainer from "./components/DessertContainer";
 // import AddForm from "./components/AddForm";
 import NavBar from "./components/NavBar";
 
@@ -13,10 +13,10 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        {/* <Route path="/food">
-          <Food />
+        <Route path="/desserts">
+          <DessertContainer />
         </Route>
-        <Route path="/form">
+        {/* <Route path="/form">
           <AddForm />
         </Route> */}
       </Switch>

@@ -30,6 +30,13 @@ function NavBar() {
               to="/desserts/new"
               style={{ textDecoration: "none" }}
             >
+              My Dessert
+            </NavLink>
+            <NavLink
+              className="button"
+              to="/desserts/new"
+              style={{ textDecoration: "none" }}
+            >
               Add Dessert
             </NavLink>
           </Nav>
