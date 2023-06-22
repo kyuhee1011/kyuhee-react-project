@@ -20,14 +20,14 @@ function NavBar() {
             <NavLink
               className="button"
               exact
-              to="/food"
+              to="/desserts"
               style={{ textDecoration: "none" }}
             >
               Dessert
             </NavLink>
             <NavLink
               className="button"
-              to="/food/new"
+              to="/desserts/new"
               style={{ textDecoration: "none" }}
             >
               Add Dessert
@@ -41,7 +41,7 @@ function NavBar() {
             className="me-2"
             aria-label="Search"
           />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="outline-primary">Search</Button>
         </Form>
       </Container>
     </Navbar>

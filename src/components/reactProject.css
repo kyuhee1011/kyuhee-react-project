@@ -3,15 +3,20 @@
 }
 
 .button {
-    color: black;
+    color: rgb (58, 128, 219);
     background: white;
     padding: .5rem;
     margin-right: 1rem;
-    border: rgb(51, 143, 89) 2px solid;
+    border: rgb(58, 128, 219) 2px solid;
     border-radius: 1em;
 }
 
 .searchButton {
     border: rgb(51, 143, 89) 2px solid;
     border-radius: 1em;
+}
+
+.favorite-dessert-home {
+    color:rgb(245, 105, 12);
+    font-weight: bold;
 }
