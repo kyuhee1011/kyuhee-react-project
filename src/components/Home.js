@@ -20,8 +20,11 @@ function Home() {
       <h3 className="favorite-dessert-home">Favorite Desserts</h3>
       <div>
         {desserts.map((dessert) => dessert.name)}
-        {/* <img src={dessert.image} style={{ width: "100%", height: "auto" }} />
-        ))} */}
+        {/* // <img
+          //   src={dessert.image}
+          //   style={{ width: "100%", height: "auto" }}
+          //   alt="Sweet Dessert"
+          // /> */}
       </div>
       <Link to="/desserts">
         <Button

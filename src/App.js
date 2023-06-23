@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import DessertContainer from "./components/DessertContainer";
 import AddForm from "./components/AddForm";
 import NavBar from "./components/NavBar";
-import DessertList from "./components/DessertList";
+// import DessertList from "./components/DessertList";
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
         <Route exact path="/desserts">
           <DessertContainer />
         </Route>
-        <Route exact path="/new">
+        {/* <Route exact path="/new">
           <DessertList />
-        </Route>
+        </Route> */}
         <Route exact path="/addForm">
           <AddForm />
         </Route>

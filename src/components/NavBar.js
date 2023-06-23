@@ -26,18 +26,18 @@ function NavBar() {
             >
               Dessert
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className="button"
               exact
-              to="/desserts/new"
+              to="/new"
               style={{ textDecoration: "none" }}
             >
               My Dessert
-            </NavLink>
+            </NavLink> */}
             <NavLink
               className="button"
               exact
-              to="/desserts/addForm"
+              to="/addForm"
               style={{ textDecoration: "none" }}
             >
               Add Dessert

@@ -1,20 +1,20 @@
 import React from "react";
-
-import { useState, useEffect } from "react";
+import DessertPop from "./DessertPop";
+import { Card, CardGroup, Button } from "react-bootstrap";
 
 function DessertList() {
-  const [favorite, setMyFav] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/desserts")
-      .then((r) => r.json())
-      .then((desserts) => {
-        console.log("Sweet Dessert pictures loaded");
-        setMyFav(desserts);
-      });
-  }, []);
-
-  return <div>DessertList {favorite}</div>;
+  return (
+    <CardGroup>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Dalgona-Korean sugar candy</Card.Title>
+          <Card.Text>Sweet Sugar Candy.</Card.Text>
+        </Card.Body>
+        <Button variant="danger">Adds to My Favorite</Button>{" "}
+      </Card>
+    </CardGroup>
+  );
 }
 
 export default DessertList;

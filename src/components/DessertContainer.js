@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import DessertList from "./DessertList";
+import DessertList from "./DessertList";
+// import DessertPop from "./DessertPop";
+// import AddForm from "./AddForm";
 
 //Dessert Page
 
@@ -13,16 +15,31 @@ function DessertContainer() {
     fetch("http://localhost:3000/desserts")
       .then((r) => r.json())
       .then((desserts) => {
-        console.log("Sweety sugar Dessert loaded");
         setDesserts(desserts);
       });
   }, []);
 
-  //   const dessertsFavList = () => {};
-
   //   const handleMyFavDessert = () => {
   //     setFavorites((favorites) => !favorites);
   //   };
+
+  //   const onSearchDessert = () => {
+  //     setSearchSweet(searchSweet);
+  //   };
+
+  //const searchTerm=me-2.value.toLowerCase();
+
+  //   const dessertToDisplay = desserts
+  //     if (favorite) {dessertToDisplay= favorite.filter ((desserts) =>dessert.favorite)
+  //  }
+
+  //  if (searchSweet) {dessertToDisplay = dessert.name.fitler ((name)=>name.toLowerCase().includes (searchTerm))}
+
+  return (
+    <div>
+      <DessertList desserts={desserts} />
+    </div>
+  );
 
   //   const onMyFavTask = (myFavorite) => {
   //     const addMyFav = desserts.map((desserts) =>
@@ -31,23 +48,9 @@ function DessertContainer() {
   //     setFavorites(addMyFav);
   //   };
 
-  //   const dessertToDisplay = desserts
-  //     if (favorite) {dessertToDisplay= favorite.filter ((desserts) =>dessert.favorite)
-  //  }
+  //   return (
 
-  //     return item.category === selectedCategory;
-  //   });
-
-  return (
-    <h2>dessert loaded {desserts}</h2>
-    // <DessertList
-    //   desserts={dessertsFavList}
-    //   searchSweet={searchSweet}
-    //   favorites={favorites}
-    //   onMyFavorClick={handleMyFavDessert}
-    //   onFavoriteDessert={onMyFavTask}
-    // />
-  );
+  //   );
 }
 
 export default DessertContainer;
