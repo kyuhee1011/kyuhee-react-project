@@ -11,6 +11,7 @@ function NavBar() {
           <Nav>
             <NavLink
               className="button"
+              exact
               to="/"
               style={{ textDecoration: "none" }}
             >
@@ -27,6 +28,7 @@ function NavBar() {
             </NavLink>
             <NavLink
               className="button"
+              exact
               to="/desserts/new"
               style={{ textDecoration: "none" }}
             >
@@ -34,7 +36,8 @@ function NavBar() {
             </NavLink>
             <NavLink
               className="button"
-              to="/desserts/new"
+              exact
+              to="/desserts/addForm"
               style={{ textDecoration: "none" }}
             >
               Add Dessert

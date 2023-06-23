@@ -6,8 +6,8 @@ import { useState, useEffect } from "react";
 
 function DessertContainer() {
   const [desserts, setDesserts] = useState([]);
-  const [favorites, setFavorites] = useState(false);
-  const [searchSweet, setSearchSweet] = useState("");
+  //   const [favorites, setFavorites] = useState(false);
+  //   const [searchSweet, setSearchSweet] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/desserts")
@@ -18,33 +18,35 @@ function DessertContainer() {
       });
   }, []);
 
-  const dessertsFavList = () => {};
+  //   const dessertsFavList = () => {};
 
-  const handleMyFavDessert = () => {
-    setFavorites((favorites) => !favorites);
-  };
+  //   const handleMyFavDessert = () => {
+  //     setFavorites((favorites) => !favorites);
+  //   };
 
-  const onMyFavTask = (myFavorite) => {
-    const addMyFav = desserts.map((desserts) =>
-      desserts.id === myFavorite.id ? myFavorite : desserts
-    );
-    setFavorites(addMyFav);
-  };
+  //   const onMyFavTask = (myFavorite) => {
+  //     const addMyFav = desserts.map((desserts) =>
+  //       desserts.id === myFavorite.id ? myFavorite : desserts
+  //     );
+  //     setFavorites(addMyFav);
+  //   };
 
-  //   const itemsToDisplay = items.filter((item) => {
-  //     if (selectedCategory === "All") return true;
+  //   const dessertToDisplay = desserts
+  //     if (favorite) {dessertToDisplay= favorite.filter ((desserts) =>dessert.favorite)
+  //  }
 
   //     return item.category === selectedCategory;
   //   });
 
   return (
-    <DessertList
-      desserts={dessertsFavList}
-      searchSweet={searchSweet}
-      favorites={favorites}
-      onMyFavorClick={handleMyFavDessert}
-      onFavoriteDessert={onMyFavTask}
-    />
+    <h2>dessert loaded {desserts}</h2>
+    // <DessertList
+    //   desserts={dessertsFavList}
+    //   searchSweet={searchSweet}
+    //   favorites={favorites}
+    //   onMyFavorClick={handleMyFavDessert}
+    //   onFavoriteDessert={onMyFavTask}
+    // />
   );
 }
 

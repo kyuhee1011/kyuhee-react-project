@@ -18,7 +18,11 @@ function Home() {
   return (
     <Container className="bg-light text-center">
       <h3 className="favorite-dessert-home">Favorite Desserts</h3>
-      <div>{desserts.map((dessert) => dessert.image)}</div>
+      <div>
+        {desserts.map((dessert) => dessert.name)}
+        {/* <img src={dessert.image} style={{ width: "100%", height: "auto" }} />
+        ))} */}
+      </div>
       <Link to="/desserts">
         <Button
           variant="outline-primary"
