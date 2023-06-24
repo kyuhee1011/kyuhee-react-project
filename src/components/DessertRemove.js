@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-function DessertCard({ dessert }) {
+function DessertRemove({ dessert }) {
   const handleDeleteClickTask = () => {
     fetch(`http://localhost:3000/desserts/${dessert.id}`, {
-      method: "POST",
+      method: "DELETE",
     }).then((res) => res.json());
   };
   return (
@@ -22,4 +22,4 @@ function DessertCard({ dessert }) {
   );
 }
 
-export default DessertCard;
+export default DessertRemove;

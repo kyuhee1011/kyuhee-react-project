@@ -10,7 +10,7 @@ const formList = {
   directions: "",
   Favorite: "",
 };
-function AddForm({ onMyFavList }) {
+function AddForm() {
   const [desserts, setDesserts] = useState(formList);
   let history = useHistory();
   console.log(history);
@@ -90,48 +90,5 @@ function AddForm({ onMyFavList }) {
     </Form>
   );
 }
-//   const handleChangeTask = (e) => {
-//     e.target.value;
-//     setDesserts((desserts) => (desserts, e.target.value));
-//   };
-
-//   useEffect(() => {
-//     fetch("http://localhost:3000/desserts")
-//       .then((r) => r.json())
-//       .then((desserts) => {
-//         console.log("Sweet Dessert pictures loaded");
-//         setDesserts(desserts);
-//       });
-//   }, []);
-
-//   //   const handleSubmitTask = (e) => {
-//   //     e.preventDefault();
-//   //     let newMyAdd = {
-//   //       name: desserts.name,
-//   //       image: desserts.image,
-//   //       ingredient: desserts.ingredient,
-//   //       direction: desserts.direction,
-//   //     };
-//   //     useEffect(() => {
-//   //       fetch("http://localhost:3000/desserts/", {
-//   //         method: "POST",
-//   //         headers: { "Content-Type": "application/json" },
-//   //         body: JSON.stringify(newMyAdd),
-//   //       })
-//   //         .then((res) => res.json())
-//   //         .then((newMyAdd) => {
-//   //           newMyAdd.push("/desserts");
-//   //         });
-//   //     });
-//   //   };
-
-//   //   const onAddMyDessert = (newDessert) => {
-//   //     setDesserts([...desserts, newDessert]);
-//   //   };
-
-//   //   const handleSubmitTask = (e) => {
-//   //     e.preventDefault();
-//   //   };
-//
 
 export default AddForm;

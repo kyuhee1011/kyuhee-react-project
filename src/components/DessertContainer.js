@@ -1,6 +1,6 @@
 import React from "react";
 // import { useState, useEffect } from "react";
-import DessertCard from "./DessertCard";
+import DessertRemove from "./DessertRemove";
 import { CardGroup } from "react-bootstrap";
 // import AddForm from "./AddForm";
 
@@ -38,7 +38,7 @@ function DessertContainer({ desserts }) {
   return (
     <CardGroup>
       {desserts.map((dessert) => (
-        <DessertCard key={dessert.id} dessert={dessert} />
+        <DessertRemove key={dessert.id} dessert={dessert} />
       ))}
     </CardGroup>
   );

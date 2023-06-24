@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardGroup, Button } from "react-bootstrap";
 
-function DessertList({ id, favorites, onMyFav }) {
+function DessertList({ desserts }) {
   const handleFavClickTask = () =>
     fetch(`http://localhost:3000/desserts/${id}`, {
       method: "PATCH",
