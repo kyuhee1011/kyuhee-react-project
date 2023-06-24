@@ -1,18 +1,15 @@
 import React from "react";
+import DessertCard from "./DessertCard";
+import { CardGroup } from "react-bootstrap";
 
-function DessertPop({ id, favorites, onMyFav }) {
-  const handleDeleteClickTask = () => {
-    fetch(`http://localhost:3000/desserts/${id}`, {
-      method: "Delete",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ favorites: !favorites }),
-    })
-      .then((res) => res.json())
-      .then(onMyFav);
-  };
-  return <div>DessertPop</div>;
+function DessertPop({ desserts }) {
+  return (
+    <CardGroup>
+      {desserts.map((dessert) => (
+        <DessertCard key={dessert.id} dessert={dessert} />
+      ))}
+    </CardGroup>
+  );
 }
 
 export default DessertPop;

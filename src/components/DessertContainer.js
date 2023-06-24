@@ -1,14 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import DessertList from "./DessertList";
-// import DessertPop from "./DessertPop";
+import DessertPop from "./DessertPop";
 // import AddForm from "./AddForm";
 
 //Dessert Page
 
 function DessertContainer() {
   const [desserts, setDesserts] = useState([]);
-  //   const [favorites, setFavorites] = useState(false);
+  const [favorites, setFavorites] = useState(false);
   //   const [searchSweet, setSearchSweet] = useState("");
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function DessertContainer() {
       });
   }, []);
 
-  //   const handleMyFavDessert = () => {
+  //   const onMyFavDessert = () => {
   //     setFavorites((favorites) => !favorites);
   //   };
 
@@ -38,6 +38,7 @@ function DessertContainer() {
   return (
     <div>
       <DessertList desserts={desserts} />
+      {/* <DessertPop onMyFavDessert={onMyFavDessert}/> */}
     </div>
   );
 

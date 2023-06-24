@@ -1,30 +1,21 @@
 import React from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Container, Button } from "react-bootstrap";
 
-function Home() {
-  const [desserts, setDessert] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/desserts")
-      .then((r) => r.json())
-      .then((desserts) => {
-        console.log("Sweet Dessert pictures loaded");
-        setDessert(desserts);
-      });
-  }, []);
-
+function Home({ desserts }) {
   return (
     <Container className="bg-light text-center">
       <h3 className="favorite-dessert-home">Favorite Desserts</h3>
       <div>
-        {desserts.map((dessert) => dessert.name)}
-        {/* // <img
-          //   src={dessert.image}
-          //   style={{ width: "100%", height: "auto" }}
-          //   alt="Sweet Dessert"
-          // /> */}
+        {desserts.map((dessert) => (
+          <img
+            key={dessert.id}
+            src={dessert.image}
+            style={{ width: "100%", height: "auto" }}
+            alt="Sweet Dessert"
+          />
+        ))}
       </div>
       <Link to="/desserts">
         <Button

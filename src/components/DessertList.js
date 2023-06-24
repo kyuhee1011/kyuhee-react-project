@@ -1,5 +1,4 @@
 import React from "react";
-import DessertPop from "./DessertPop";
 import { Card, CardGroup, Button } from "react-bootstrap";
 
 function DessertList({ id, favorites, onMyFav }) {

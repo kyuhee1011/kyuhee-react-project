@@ -2,6 +2,16 @@
 // import { useState, useEffect } from "react";
 // import { Form, Button, InputGroup } from "react-bootstrap";
 
+// fetch(`http://localhost:3000/desserts/${id}`, {
+//     method: "PATCH",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ favorites: !favorites }),
+//   })
+//     .then((res) => res.json())
+//     .then(onMyFav);
+
 // function AddForm() {
 //   const [desserts, setDesserts] = useState([]);
 //   //     name: "",
