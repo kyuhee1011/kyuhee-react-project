@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 function DessertCard({ dessert }) {
   const handleDeleteClickTask = () => {
     fetch(`http://localhost:3000/desserts/${dessert.id}`, {
-      method: "DELETE",
+      method: "PATCH",
     }).then((res) => res.json());
   };
   return (
@@ -15,7 +15,7 @@ function DessertCard({ dessert }) {
         <Card.Text>{dessert.ingredients}</Card.Text>
       </Card.Body>
       <Button variant="danger" onClick={handleDeleteClickTask}>
-        Remove from My Favorite
+        My Favorite
         {/* {favorites ? "Add to My Favorite" : "Remove My Dessert"} */}
       </Button>
     </Card>

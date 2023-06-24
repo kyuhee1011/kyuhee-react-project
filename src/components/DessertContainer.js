@@ -1,23 +1,23 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import DessertList from "./DessertList";
-import DessertPop from "./DessertPop";
+// import { useState, useEffect } from "react";
+import DessertCard from "./DessertCard";
+import { CardGroup } from "react-bootstrap";
 // import AddForm from "./AddForm";
 
 //Dessert Page
 
-function DessertContainer() {
-  const [desserts, setDesserts] = useState([]);
-  const [favorites, setFavorites] = useState(false);
-  //   const [searchSweet, setSearchSweet] = useState("");
+function DessertContainer({ desserts }) {
+  //   const [desserts, setDesserts] = useState([]);
+  //   const [favorites, setFavorites] = useState(false);
+  //   //   const [searchSweet, setSearchSweet] = useState("");
 
-  useEffect(() => {
-    fetch("http://localhost:3000/desserts")
-      .then((r) => r.json())
-      .then((desserts) => {
-        setDesserts(desserts);
-      });
-  }, []);
+  //   useEffect(() => {
+  //     fetch("http://localhost:3000/desserts")
+  //       .then((r) => r.json())
+  //       .then((desserts) => {
+  //         setDesserts(desserts);
+  //       });
+  //   }, []);
 
   //   const onMyFavDessert = () => {
   //     setFavorites((favorites) => !favorites);
@@ -36,10 +36,11 @@ function DessertContainer() {
   //  if (searchSweet) {dessertToDisplay = dessert.name.fitler ((name)=>name.toLowerCase().includes (searchTerm))}
 
   return (
-    <div>
-      <DessertList desserts={desserts} />
-      {/* <DessertPop onMyFavDessert={onMyFavDessert}/> */}
-    </div>
+    <CardGroup>
+      {desserts.map((dessert) => (
+        <DessertCard key={dessert.id} dessert={dessert} />
+      ))}
+    </CardGroup>
   );
 
   //   const onMyFavTask = (myFavorite) => {

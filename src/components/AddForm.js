@@ -1,9 +1,10 @@
-// import React from "react";
-// import { useState, useEffect } from "react";
-// import { Form, Button, InputGroup } from "react-bootstrap";
+import React from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { Form, Button, InputGroup } from "react-bootstrap";
 
 // fetch(`http://localhost:3000/desserts/${id}`, {
-//     method: "PATCH",
+//     method: "POST",
 //     headers: {
 //       "Content-Type": "application/json",
 //     },
@@ -11,15 +12,28 @@
 //   })
 //     .then((res) => res.json())
 //     .then(onMyFav);
+const formList = {
+  name: "",
+  image: "",
+  ingredients: "",
+  directions: "",
+  Favorite: "",
+};
+function AddForm() {
+  const [desserts, setDesserts] = useState(formList);
+  let history = useHistory();
+  console.log(history);
 
-// function AddForm() {
-//   const [desserts, setDesserts] = useState([]);
-//   //     name: "",
-//   //     image: "",
-//   //     ingredients: "",
-//   //     directions: "",
-//   //     Favorite: "",
-//   //   });
+  return (
+    <form>
+      <div>
+        <label> sweet </label>
+        <input type="text" placeholder="name" />
+        <button>submit</button>
+      </div>
+    </form>
+  );
+}
 //   const handleChangeTask = (e) => {
 //     e.target.value;
 //     setDesserts((desserts) => (desserts, e.target.value));
@@ -64,13 +78,6 @@
 //   //   };
 //   return (
 //     // <h3> sweet {desserts}</h3>
-
-//     // <form>
-//     //   <div>
-//     //     <label> sweet {formData}</label>
-//     //     <input type="text" placeholder="name" />
-//     //   </div>
-//     // </form>
 
 //     <>
 //       <InputGroup className="mb-3">
@@ -142,4 +149,4 @@
 //   );
 // }
 
-// export default AddForm;
+export default AddForm;

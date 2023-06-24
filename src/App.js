@@ -10,6 +10,7 @@ import DessertPop from "./components/DessertPop";
 
 function App() {
   const [desserts, setDessert] = useState([]);
+  const [favorites, setFavorites] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/desserts")
@@ -19,6 +20,18 @@ function App() {
         setDessert(desserts);
       });
   }, []);
+
+  const onMyFavList = (favoritesDessert) => {
+    const updateMyList = desserts.map(
+      (desserts) => desserts.id === favoritesDessert
+    );
+    setDessert(updateMyList);
+  };
+
+  const handleMyFav = () => {
+    setFavorites((favorites) => !favorites);
+  };
+
   return (
     <div>
       <NavBar />
@@ -33,7 +46,7 @@ function App() {
           <DessertPop desserts={desserts} />
         </Route>
         <Route exact path="/addForm">
-          <AddForm desserts={desserts} />
+          <AddForm onAddMyFav={onMyFavList} />
         </Route>
       </Switch>
     </div>
