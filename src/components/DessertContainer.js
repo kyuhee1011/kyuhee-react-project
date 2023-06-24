@@ -1,23 +1,24 @@
 import React from "react";
 // import { useState, useEffect } from "react";
-import DessertRemove from "./DessertRemove";
+import DessertCard from "./DessertCard";
 import { CardGroup } from "react-bootstrap";
 // import AddForm from "./AddForm";
 
 //Dessert Page
 
-function DessertContainer({ desserts }) {
+function DessertContainer({ desserts, onMyFavList }) {
+  const dessertArray = desserts.map((dessert) => {
+    return (
+      <DessertCard
+        key={dessert.id}
+        dessert={dessert}
+        onMyFavList={onMyFavList}
+      />
+    );
+  });
   //   const [desserts, setDesserts] = useState([]);
   //   const [favorites, setFavorites] = useState(false);
   //   //   const [searchSweet, setSearchSweet] = useState("");
-
-  //   useEffect(() => {
-  //     fetch("http://localhost:3000/desserts")
-  //       .then((r) => r.json())
-  //       .then((desserts) => {
-  //         setDesserts(desserts);
-  //       });
-  //   }, []);
 
   //   const onMyFavDessert = () => {
   //     setFavorites((favorites) => !favorites);
@@ -35,24 +36,7 @@ function DessertContainer({ desserts }) {
 
   //  if (searchSweet) {dessertToDisplay = dessert.name.fitler ((name)=>name.toLowerCase().includes (searchTerm))}
 
-  return (
-    <CardGroup>
-      {desserts.map((dessert) => (
-        <DessertRemove key={dessert.id} dessert={dessert} />
-      ))}
-    </CardGroup>
-  );
-
-  //   const onMyFavTask = (myFavorite) => {
-  //     const addMyFav = desserts.map((desserts) =>
-  //       desserts.id === myFavorite.id ? myFavorite : desserts
-  //     );
-  //     setFavorites(addMyFav);
-  //   };
-
-  //   return (
-
-  //   );
+  return <CardGroup>{dessertArray}</CardGroup>;
 }
 
 export default DessertContainer;

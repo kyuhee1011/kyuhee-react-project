@@ -26,7 +26,6 @@ function AddForm() {
       name: desserts.name,
       image: desserts.image,
       description: desserts.description,
-      direction: desserts.directions,
     };
     fetch(`http://localhost:3000/desserts`, {
       method: "POST",
@@ -38,6 +37,7 @@ function AddForm() {
       .then((res) => res.json())
       .then((returnedDesserts) => {
         setDesserts(returnedDesserts);
+
         history.push("/desserts");
       });
   };
@@ -47,6 +47,7 @@ function AddForm() {
       <InputGroup className="mb-3">
         <Form.Label>name</Form.Label>
         <Form.Control
+          id="name"
           type="text"
           name="name"
           placeholder="Enter name of the dessert"
@@ -58,6 +59,8 @@ function AddForm() {
       <InputGroup className="mb-3">
         <Form.Label>image</Form.Label>
         <Form.Control
+          id="image"
+          name="image"
           type="text"
           placeholder="copy image's url"
           onChange={handleInputChange}
@@ -66,24 +69,17 @@ function AddForm() {
       </InputGroup>
 
       <InputGroup className="mb-3">
-        <Form.Label>Ingredients</Form.Label>
+        <Form.Label>Description</Form.Label>
         <Form.Control
+          id="description"
+          name="description"
           type="text"
-          placeholder="Write down the ingredients"
+          placeholder="Write down the description"
           onChange={handleInputChange}
-          value={desserts.ingredients}
+          value={desserts.description}
         />
       </InputGroup>
 
-      <InputGroup className="mb-3">
-        <Form.Label>Directions</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Write down the Directions"
-          onChange={handleInputChange}
-          value={desserts.directions}
-        />
-      </InputGroup>
       <Button variant="primary" type="submit">
         Submit
       </Button>
