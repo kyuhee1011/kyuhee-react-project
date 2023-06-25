@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Button, InputGroup } from "react-bootstrap";
+import "./AddForm.css";
 
 const formList = {
   name: "",
@@ -43,11 +44,12 @@ function AddForm() {
   };
   return (
     <Form onSubmit={handleSubmitTask}>
-      <h3> sweet </h3>
+      <h3 className="addFormTitle"> Add My Sweet </h3>
       <InputGroup className="mb-3">
-        <Form.Label>name</Form.Label>
+        <Form.Label className="formName">name</Form.Label>
         <Form.Control
           id="name"
+          className="inputSpace"
           type="text"
           name="name"
           placeholder="Enter name of the dessert"

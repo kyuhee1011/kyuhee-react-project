@@ -1,5 +1,5 @@
 import React from "react";
-import DessertCard from "./DessertCard";
+import DessertCard from "../DessertCard/DessertCard";
 import { CardGroup } from "react-bootstrap";
 
 function DessertPop({ desserts, onMyFavList }) {

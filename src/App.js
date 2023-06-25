@@ -1,12 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
-
-import Home from "./components/Home";
-import DessertContainer from "./components/DessertContainer";
-import AddForm from "./components/AddForm";
-import NavBar from "./components/NavBar";
-import DessertPop from "./components/DessertPop";
+import Home from "./components/Home/Home";
+import DessertContainer from "./components//DessertContainer/DessertContainer";
+import AddForm from "./components/AddForm/AddForm";
+import NavBar from "./components/NavBar/NavBar";
+import DessertPop from "./components/DessertPop/DessertPop";
 
 function App() {
   const [desserts, setDessert] = useState([]);
