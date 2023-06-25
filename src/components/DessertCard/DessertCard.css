@@ -1,0 +1,36 @@
+.dessertContainer {
+    margin:1rem 2rem 3rem 4rem;
+    display: flex;
+    border: 2px orange solid;
+   
+}
+.dessertItem{
+    padding: 10px;
+    border: 2px orange solid;
+}
+
+/*display change by window size */
+
+@media screen and (min-width: 500px) {
+    .dessertContainer {      
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        padding:10px;
+        border: 2px orange solid;
+
+    }
+    .bodyBorder {   border: 2px orange solid;}
+
+    .dessertIamge{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .buttonBottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    
+}

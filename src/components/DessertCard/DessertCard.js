@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Card, Button } from "react-bootstrap";
+import "./DessertCard.css";
 
 function DessertCard({ dessert, onMyFavList }) {
   const { id, name, image, description, favorite } = dessert;
@@ -19,13 +20,17 @@ function DessertCard({ dessert, onMyFavList }) {
       });
   };
   return (
-    <Card key={id}>
-      <Card.Img variant="top" src={image} />
+    <Card className="dessertContainer bodyBorder" key={id}>
+      <Card.Img className="dessertIamge" variant="top" src={image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
       </Card.Body>
-      <Button variant="danger" onClick={handleUpdateClickTask}>
+      <Button
+        className="buttonBottom"
+        variant="danger"
+        onClick={handleUpdateClickTask}
+      >
         My Favorite
         {/* {favorites ? "Add to My Favorite" : "Remove My Dessert"} */}
       </Button>
