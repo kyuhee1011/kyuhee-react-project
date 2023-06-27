@@ -88,7 +88,7 @@ function AddForm({ desserts, setDessert }) {
         <InputGroup className="formCenter">
           <Row>
             <Col lg="10">
-              <Form.Label className="formName">Description</Form.Label>
+              <Form.Label className="descriptionName">Description</Form.Label>
 
               <Form.Control
                 sm="12"
