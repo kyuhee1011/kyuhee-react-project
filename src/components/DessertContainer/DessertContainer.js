@@ -6,7 +6,6 @@ import { CardGroup } from "react-bootstrap";
 //Dessert Page
 
 function DessertContainer({ desserts, onMyFavList }) {
-  // const [modalShow, setModalShow] = useState(false);
   const dessertArray = desserts.map((dessert) => {
     return (
       <DessertCard

@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { Card, Button } from "react-bootstrap";
+
 import "./DessertCard.css";
 
 function DessertCard({ dessert, onMyFavList }) {
   const { id, name, image, description, favorite } = dessert;
   const [myfavorite, setMyFavorite] = useState(favorite);
-
   const handleUpdateClickTask = () => {
     setMyFavorite((myfavorite) => !myfavorite);
     fetch(`http://localhost:3000/desserts/${id}`, {
@@ -32,7 +32,6 @@ function DessertCard({ dessert, onMyFavList }) {
         onClick={handleUpdateClickTask}
       >
         My Favorite
-        {/* {favorites ? "Add to My Favorite" : "Remove My Dessert"} */}
       </Button>
     </Card>
   );

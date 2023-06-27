@@ -11,22 +11,23 @@ const formList = {
   directions: "",
   Favorite: "",
 };
-function AddForm() {
-  const [desserts, setDesserts] = useState(formList);
+// passing desserts and setDessert from App (parent) component
+function AddForm({ desserts, setDessert }) {
+  const [formDesserts, setformDesserts] = useState(formList);
   let history = useHistory();
   console.log(history);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setDesserts((desserts) => ({ ...desserts, [name]: value }));
+    setformDesserts((formDesserts) => ({ ...formDesserts, [name]: value }));
   };
 
   const handleSubmitTask = (e) => {
     e.preventDefault();
     let newList = {
-      name: desserts.name,
-      image: desserts.image,
-      description: desserts.description,
+      name: formDesserts.name,
+      image: formDesserts.image,
+      description: formDesserts.description,
     };
     fetch(`http://localhost:3000/desserts`, {
       method: "POST",
@@ -37,7 +38,8 @@ function AddForm() {
     })
       .then((res) => res.json())
       .then((returnedDesserts) => {
-        setDesserts(returnedDesserts);
+        console.log(returnedDesserts);
+        setDessert([...desserts, returnedDesserts]);
 
         history.push("/desserts");
       });
@@ -48,7 +50,7 @@ function AddForm() {
       <div className="formLeft">
         <InputGroup className="formCenter">
           <Row>
-            <Col>
+            <Col lg="10">
               <Form.Label className="formName">Name</Form.Label>
 
               <Form.Control
@@ -58,7 +60,7 @@ function AddForm() {
                 name="name"
                 placeholder="Enter name of the dessert"
                 onChange={handleInputChange}
-                value={desserts.name}
+                value={formDesserts.name}
               />
             </Col>
           </Row>
@@ -66,16 +68,18 @@ function AddForm() {
 
         <InputGroup className="formCenter">
           <Row>
-            <Col>
+            <Col md="10">
               <Form.Label className="formName">Image</Form.Label>
+
               <Form.Control
                 id="image"
                 className="inputSpace"
                 name="image"
                 type="text"
+                size="md"
                 placeholder="copy image's url"
                 onChange={handleInputChange}
-                value={desserts.image}
+                value={formDesserts.image}
               />
             </Col>
           </Row>
@@ -83,7 +87,7 @@ function AddForm() {
 
         <InputGroup className="formCenter">
           <Row>
-            <Col>
+            <Col lg="10">
               <Form.Label className="formName">Description</Form.Label>
 
               <Form.Control
@@ -93,9 +97,10 @@ function AddForm() {
                 as="textarea"
                 rows={7}
                 className="inputSpace"
+                size="lg"
                 placeholder="Write down the description"
                 onChange={handleInputChange}
-                value={desserts.description}
+                value={formDesserts.description}
               />
             </Col>
           </Row>

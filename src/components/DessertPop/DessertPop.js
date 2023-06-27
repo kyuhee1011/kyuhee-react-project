@@ -7,17 +7,14 @@ function DessertPop({ desserts, onMyFavList }) {
   const myFavDessert = myFavClick.map((dessert) => {
     return (
       <DessertCard
+        className="dessertContainer"
         key={dessert.id}
         dessert={dessert}
         onMyFavList={onMyFavList}
       />
     );
   });
-  return (
-    <CardGroup>
-      <ul>{myFavDessert}</ul>
-    </CardGroup>
-  );
+  return <CardGroup>{myFavDessert}</CardGroup>;
 }
 
 export default DessertPop;

@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav, Navbar, Container, Button, Form } from "react-bootstrap";
+
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ searchSubmit, setSearchSubmit }) {
   return (
     <Navbar>
       <Container fluid>
@@ -47,11 +48,16 @@ function NavBar() {
         <Form className="d-flex">
           <Form.Control
             type="search"
+            name="name"
             placeholder="Search"
-            className="me-2"
+            className="me-2 searchBar"
             aria-label="Search"
+            onChange={(e) => setSearchSubmit(e.target.value)}
+            value={searchSubmit}
           />
-          <Button variant="outline-primary">Search</Button>
+          <Button type="submit" variant="outline-primary">
+            Search
+          </Button>
         </Form>
       </Container>
     </Navbar>

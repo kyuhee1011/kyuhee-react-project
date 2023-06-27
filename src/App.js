@@ -9,6 +9,12 @@ import DessertPop from "./components/DessertPop/DessertPop";
 
 function App() {
   const [desserts, setDessert] = useState([]);
+  // const [searchSubmit, setSearchSubmit] = useState("");
+  // console.log(searchSubmit);
+  // const searchTask = desserts.filter((element) => {
+  //   return element.name.toLowerCase().includes(searchSubmit);
+  // });
+  // console.log(searchTask);
 
   useEffect(() => {
     fetch("http://localhost:3000/desserts")
@@ -32,18 +38,30 @@ function App() {
   return (
     <div>
       <NavBar />
+      {/* searchSubmit={searchSubmit} setSearchSubmit={setSearchSubmit}  */}
       <Switch>
         <Route exact path="/">
           <Home desserts={desserts} />
         </Route>
         <Route exact path="/desserts">
-          <DessertContainer desserts={desserts} onMyFavList={onMyFavList} />
+          <DessertContainer
+            // desserts={searchTask}
+            desserts={desserts}
+            onMyFavList={onMyFavList}
+
+            //control component, props, useState
+          />
         </Route>
         <Route exact path="/new">
           <DessertPop desserts={desserts} onMyFavList={onMyFavList} />
         </Route>
         <Route exact path="/addForm">
-          <AddForm onAddMyFav={onMyFavList} />
+          <AddForm
+            //pass props to AddForm component
+            desserts={desserts}
+            setDessert={setDessert}
+            onAddMyFav={onMyFavList}
+          />
         </Route>
       </Switch>
     </div>

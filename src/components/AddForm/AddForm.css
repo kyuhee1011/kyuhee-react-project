@@ -10,6 +10,22 @@
     padding-left: 1rem;
   
 }
+
+/* .formLeft {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1em;
+}
+.formCenter> .formName {
+    grid-column: 1;
+    grid-row: auto;
+}
+
+.formCenter > .inputSpace {
+    grid-column: 2;
+    grid-row: auto;
+} */
+
 .formCenter {
   display: grid;
   justify-content: center;
@@ -24,6 +40,7 @@
 }
 
 .inputSpace {
+    width: 50%;
     padding: 1rem .5rem .2rem .5rem;
     margin: .2rem .5rem .1rem 1rem;
     text-align: center;
