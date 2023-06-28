@@ -36,7 +36,7 @@ function App() {
     setDessert(updateMyList);
   };
   return (
-    <div>
+    <div className="app">
       <NavBar searchSubmit={searchSubmit} setSearchSubmit={setSearchSubmit} />
       <Switch>
         <Route exact path="/">

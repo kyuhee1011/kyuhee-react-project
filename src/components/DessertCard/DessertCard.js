@@ -20,14 +20,21 @@ function DessertCard({ dessert, onMyFavList }) {
       });
   };
   return (
-    <Card className="dessertContainer bodyBorder" key={id}>
-      <Card.Img className="dessertIamge" variant="top" src={image} />
-      <Card.Body>
+    <Card
+      className="dessertItem"
+      key={id}
+      style={{ width: "25rem", margin: "1%" }}
+    >
+      <Card.Img className="imgControl" variant="top" src={image} alt={name} />
+      <Card.Body style={{ height: "20vh" }}>
         <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <div style={{ height: "100%", width: "100%" }}>
+          <Card.Text>{description}</Card.Text>
+        </div>
       </Card.Body>
+
       <Button
-        className="buttonBottom"
+        style={{ margin: "4%" }}
         variant="danger"
         onClick={handleUpdateClickTask}
       >

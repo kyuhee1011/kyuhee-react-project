@@ -1,7 +1,7 @@
 import React from "react";
 // import { useState } from "react";
 import DessertCard from "../DessertCard/DessertCard";
-import { CardGroup } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 
 //Dessert Page
 
@@ -18,7 +18,12 @@ function DessertContainer({ desserts, onMyFavList, onSearchSubmits }) {
     );
   });
 
-  return <CardGroup>{dessertArray}</CardGroup>;
+  return (
+    <Container fluid>
+      {" "}
+      <Row>{dessertArray}</Row>
+    </Container>
+  );
 }
 
 export default DessertContainer;
