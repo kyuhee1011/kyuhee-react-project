@@ -1,8 +1,10 @@
 import React from "react";
 import DessertCard from "../DessertCard/DessertCard";
-import { CardGroup } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 
-function DessertPop({ desserts, onMyFavList }) {
+//My Dessert Page
+
+function DessertPop({ desserts, onMyFavList, onSearchSubmits }) {
   const myFavClick = desserts.filter((dessert) => dessert.favorite);
   const myFavDessert = myFavClick.map((dessert) => {
     return (
@@ -11,10 +13,15 @@ function DessertPop({ desserts, onMyFavList }) {
         key={dessert.id}
         dessert={dessert}
         onMyFavList={onMyFavList}
+        onSearchSubmits={onSearchSubmits}
       />
     );
   });
-  return <CardGroup>{myFavDessert}</CardGroup>;
+  return (
+    <Container fluid>
+      <Row>{myFavDessert} </Row>{" "}
+    </Container>
+  );
 }
 
 export default DessertPop;

@@ -51,7 +51,7 @@ function App() {
           />
         </Route>
         <Route exact path="/new">
-          <DessertPop desserts={desserts} onMyFavList={onMyFavList} />
+          <DessertPop desserts={searchTask} onMyFavList={onMyFavList} />
         </Route>
         <Route exact path="/addForm">
           <AddForm

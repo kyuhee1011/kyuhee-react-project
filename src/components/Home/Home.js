@@ -1,7 +1,8 @@
 import React from "react";
-// import { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Container, Button } from "react-bootstrap";
+import "./Home.css";
 
 function Home({ desserts }) {
   return (

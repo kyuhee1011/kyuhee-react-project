@@ -7,15 +7,15 @@ import "./AddForm.css";
 const formList = {
   name: "",
   image: "",
-  ingredients: "",
-  directions: "",
+  description: "",
   Favorite: "",
 };
 // passing desserts and setDessert from App (parent) component
+
 function AddForm({ desserts, setDessert }) {
   const [formDesserts, setformDesserts] = useState(formList);
   let history = useHistory();
-  console.log(history);
+  // console.log(history);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

@@ -8,49 +8,48 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
   return (
     <Navbar>
       <Container fluid>
-        <div className="menu">
-          <Nav>
-            <NavLink
-              className="button"
-              exact
-              to="/"
-              style={{ textDecoration: "none" }}
-            >
-              Home
-            </NavLink>
+        <Nav>
+          <NavLink
+            className="button"
+            exact
+            to="/"
+            style={{ textDecoration: "none", width: "4rem", margin: "1%" }}
+          >
+            Home
+          </NavLink>
 
-            <NavLink
-              className="button"
-              exact
-              to="/desserts"
-              style={{ textDecoration: "none" }}
-            >
-              Dessert
-            </NavLink>
-            <NavLink
-              className="button"
-              exact
-              to="/new"
-              style={{ textDecoration: "none" }}
-            >
-              My Dessert
-            </NavLink>
-            <NavLink
-              className="button"
-              exact
-              to="/addForm"
-              style={{ textDecoration: "none" }}
-            >
-              Add Dessert
-            </NavLink>
-          </Nav>
-        </div>
+          <NavLink
+            className="button"
+            exact
+            to="/desserts"
+            style={{ textDecoration: "none", width: "5rem", margin: "1%" }}
+          >
+            Dessert
+          </NavLink>
+          <NavLink
+            className="button"
+            exact
+            to="/new"
+            style={{ textDecoration: "none", width: "8rem", margin: "1%" }}
+          >
+            My Dessert
+          </NavLink>
+          <NavLink
+            className="button"
+            exact
+            to="/addForm"
+            style={{ textDecoration: "none", width: "8rem", margin: "1%" }}
+          >
+            Add Dessert
+          </NavLink>
+        </Nav>
+
         <Form className="d-flex">
           <Form.Control
             type="search"
             name="name"
             placeholder="Search"
-            className="me-2 searchBar"
+            className="me-2"
             aria-label="Search"
             onChange={(e) => setSearchSubmit(e.target.value)}
             value={searchSubmit}

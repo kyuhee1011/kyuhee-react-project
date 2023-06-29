@@ -11,21 +11,6 @@
   
 }
 
-/* .formLeft {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 1em;
-}
-.formCenter> .formName {
-    grid-column: 1;
-    grid-row: auto;
-}
-
-.formCenter > .inputSpace {
-    grid-column: 2;
-    grid-row: auto;
-} */
-
 .formCenter {
   display: grid;
   justify-content: center;
