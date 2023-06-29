@@ -11,9 +11,10 @@ function Home({ desserts }) {
       <div>
         {desserts.map((dessert) => (
           <img
+            className="imgControl"
             key={dessert.id}
             src={dessert.image}
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "25rem", height: "50vh", margin: "1%" }}
             alt="Sweet Dessert"
           />
         ))}

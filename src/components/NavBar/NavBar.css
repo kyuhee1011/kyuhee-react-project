@@ -1,11 +1,16 @@
 
 .button {
     color:rgb(58, 128, 219) ;
-     background: white;
+    background: white;
     padding: .5rem;
     margin-right: 1rem;
     border: rgb(58, 128, 219) 2px solid;
     border-radius: 1em;
+
+}
+
+.menu {
+  width:40vw;
 }
 
 

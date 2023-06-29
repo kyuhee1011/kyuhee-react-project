@@ -2,3 +2,8 @@
     color:rgb(245, 105, 12);
     font-weight: bold;
 }
+
+.imgControl {
+    width: 50%;
+    height: auto;
+}

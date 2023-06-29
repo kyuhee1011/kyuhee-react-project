@@ -8,56 +8,76 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
   return (
     <Navbar>
       <Container fluid>
-        <Nav>
-          <NavLink
-            className="button"
-            exact
-            to="/"
-            style={{ textDecoration: "none", width: "4rem", margin: "1%" }}
-          >
-            Home
-          </NavLink>
+        <div className="menu">
+          <Nav style={{ width: "100%" }}>
+            <NavLink
+              className="button"
+              exact
+              to="/"
+              style={{
+                textDecoration: "none",
+                margin: "1%",
+              }}
+            >
+              Home
+            </NavLink>
 
-          <NavLink
-            className="button"
-            exact
-            to="/desserts"
-            style={{ textDecoration: "none", width: "5rem", margin: "1%" }}
-          >
-            Dessert
-          </NavLink>
-          <NavLink
-            className="button"
-            exact
-            to="/new"
-            style={{ textDecoration: "none", width: "8rem", margin: "1%" }}
-          >
-            My Dessert
-          </NavLink>
-          <NavLink
-            className="button"
-            exact
-            to="/addForm"
-            style={{ textDecoration: "none", width: "8rem", margin: "1%" }}
-          >
-            Add Dessert
-          </NavLink>
-        </Nav>
+            <NavLink
+              className="button"
+              exact
+              to="/desserts"
+              style={{
+                textDecoration: "none",
 
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            name="name"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-            onChange={(e) => setSearchSubmit(e.target.value)}
-            value={searchSubmit}
-          />
-          <Button type="submit" variant="outline-primary">
-            Search
-          </Button>
-        </Form>
+                margin: "1%",
+              }}
+            >
+              Dessert
+            </NavLink>
+            <NavLink
+              className="button"
+              exact
+              to="/new"
+              style={{
+                textDecoration: "none",
+                textAlign: "center",
+                flexGrow: "1",
+                margin: "1%",
+              }}
+            >
+              My Dessert
+            </NavLink>
+            <NavLink
+              className="button"
+              exact
+              to="/addForm"
+              style={{
+                textDecoration: "none",
+                textAlign: "center",
+                flexGrow: "1",
+                margin: "1%",
+              }}
+            >
+              Add Dessert
+            </NavLink>
+          </Nav>
+        </div>
+        <div className="search-bar-container ">
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              name="name"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+              onChange={(e) => setSearchSubmit(e.target.value)}
+              value={searchSubmit}
+            />
+            <Button type="submit" variant="outline-primary">
+              Search
+            </Button>
+          </Form>
+        </div>
       </Container>
     </Navbar>
   );
