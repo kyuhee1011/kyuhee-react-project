@@ -16,6 +16,7 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/"
               style={{
                 textDecoration: "none",
+
                 margin: "1%",
               }}
             >
@@ -28,6 +29,7 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/desserts"
               style={{
                 textDecoration: "none",
+
                 margin: "1%",
               }}
             >
@@ -39,6 +41,7 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/new"
               style={{
                 textDecoration: "none",
+
                 margin: "1%",
               }}
             >
@@ -50,6 +53,7 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/addForm"
               style={{
                 textDecoration: "none",
+
                 margin: "1%",
               }}
             >
