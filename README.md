@@ -39,9 +39,38 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Features
+
+Have 6 Components and Included 4 routes for the Client side (User to interact) with Home, DessertContainer (Dessert page), DessertPop (My Dessert page), AddForm (Add Dessert page).
+
+The ability to add dessert to create favorite list and remove by clicking the button.
+
+Repsonsive Design.
+
+Optimized for navigation.
+
 ## Backend Code GitHub Repository
 
-https://github.com/kyuhee1011/json-server-template
+https://github.com/kyuhee1011/json-server-template.git
+
+## Video
+
+https://youtu.be/jAjCqUUYO6A
+
+## Acknowledgment
+
+Dessert images: https://www.wikipedia.org/
+
+## Hierchy Breakdon
+
+App
+NavBar
+Home
+DessertContainer (Dessert)
+Dessert Card
+Dessert Pop
+Dessert Card
+AddForm
 
 ## Learn More
 
