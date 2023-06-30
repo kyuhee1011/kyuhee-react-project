@@ -9,14 +9,15 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
     <Navbar>
       <Container fluid className="navContainer">
         <div className="menu">
-          <Nav style={{ width: "100%" }}>
+          <Nav>
             <NavLink
               className="button"
               exact
               to="/"
               style={{
                 textDecoration: "none",
-
+                textAlign: "center",
+                flexGrow: "1",
                 margin: "1%",
               }}
             >
@@ -29,7 +30,8 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/desserts"
               style={{
                 textDecoration: "none",
-
+                textAlign: "center",
+                flexGrow: "1",
                 margin: "1%",
               }}
             >
@@ -41,7 +43,8 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/new"
               style={{
                 textDecoration: "none",
-
+                textAlign: "center",
+                flexGrow: "1",
                 margin: "1%",
               }}
             >
@@ -53,7 +56,8 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               to="/addForm"
               style={{
                 textDecoration: "none",
-
+                textAlign: "center",
+                flexGrow: "1",
                 margin: "1%",
               }}
             >
