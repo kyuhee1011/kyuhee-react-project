@@ -74,7 +74,7 @@ Dessert images: https://www.wikipedia.org/
 
 ## Demo
 
-[label](vscode-local:/c%253A/Users/kyuhe/Videos/2023-07-01%252006-50-57.mkv)
+![project_gif](https://github.com/kyuhee1011/kyuhee-react-project/blob/main/assets/Phase-2_React_Project_Demo.gif).
 
 ## Learn More
 
