@@ -41,13 +41,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Features
 
-Have 6 Components and Included 4 routes for the Client side (User to interact) with Home, DessertContainer (Dessert page), DessertPop (My Dessert page), AddForm (Add Dessert page).
+- Have 6 Components and Included 4 routes for the Client side (User to interact) with Home, DessertContainer (Dessert page), DessertPop (My Dessert page), AddForm (Add Dessert page).
 
-The ability to add dessert to create favorite list and remove by clicking the button.
+- The ability to add dessert to create favorite list and remove by clicking the button.
 
-Repsonsive Design.
+- Repsonsive Design.
 
-Optimized for navigation.
+- Optimized for navigation.
 
 ## Backend Code GitHub Repository
 
@@ -63,14 +63,18 @@ Dessert images: https://www.wikipedia.org/
 
 ## Hierchy Breakdon
 
-App
-NavBar
-Home
-DessertContainer (Dessert)
-Dessert Card
-Dessert Pop
-Dessert Card
-AddForm
+- App
+- NavBar
+- Home
+- DessertContainer (Dessert)
+  - Dessert Card
+- Dessert Pop
+  - Dessert Card
+- AddForm
+
+## Demo
+
+[label](vscode-local:/c%253A/Users/kyuhe/Videos/2023-07-01%252006-50-57.mkv)
 
 ## Learn More
 
