@@ -43,6 +43,7 @@ function App() {
           <Home desserts={desserts} />
         </Route>
         <Route exact path="/desserts">
+          {/* control component (onMyFavList) recieves its update callback via props */}
           <DessertContainer
             desserts={searchTask}
             onMyFavList={onMyFavList}

@@ -5,6 +5,7 @@ import { Row, Container } from "react-bootstrap";
 //My Dessert Page
 
 function DessertPop({ desserts, onMyFavList, onSearchSubmits }) {
+  //filter desserts that are clicked (onMyFavList)
   const myFavClick = desserts.filter((dessert) => dessert.favorite);
   const myFavDessert = myFavClick.map((dessert) => {
     return (

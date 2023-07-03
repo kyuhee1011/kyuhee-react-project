@@ -10,6 +10,7 @@ function DessertCard({ dessert, onMyFavList }) {
   const handleUpdateClickTask = () => {
     setMyFavorite((myfavorite) => !myfavorite);
     fetch(`http://localhost:3000/desserts/${id}`, {
+      //Updates new dessert from AddForm page and the PATCH - update new dessert list
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ favorite: !favorite }),

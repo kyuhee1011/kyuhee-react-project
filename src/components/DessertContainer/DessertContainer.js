@@ -5,6 +5,7 @@ import { Row, Container } from "react-bootstrap";
 //Dessert Page
 
 function DessertContainer({ desserts, onMyFavList, onSearchSubmits }) {
+  //onMyFavList will add to DessertPop and DessertPop will filter and shows only that are clicked.
   const dessertArray = desserts.map((dessert) => {
     return (
       <DessertCard

@@ -30,6 +30,7 @@ function AddForm({ desserts, setDessert }) {
       description: formDesserts.description,
     };
     fetch(`http://localhost:3000/desserts`, {
+      // POST - Creates a resources (add new dessert)
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,6 +40,8 @@ function AddForm({ desserts, setDessert }) {
       .then((res) => res.json())
       .then((returnedDesserts) => {
         console.log(returnedDesserts);
+        // receive setDessert from the App component
+        //adding new dessert plus original dessert list
         setDessert([...desserts, returnedDesserts]);
 
         history.push("/desserts");
@@ -59,6 +62,8 @@ function AddForm({ desserts, setDessert }) {
                 type="text"
                 name="name"
                 placeholder="Enter name of the dessert"
+                //onChange - when the value of an input element change
+                // (handleInPutChange)
                 onChange={handleInputChange}
                 value={formDesserts.name}
               />

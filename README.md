@@ -69,7 +69,7 @@ Dessert images: https://www.wikipedia.org/
 - DessertContainer (Dessert)
   - Dessert Card
 - Dessert Pop
-  - Dessert Card
+  - Dessert Card (My Dessert)
 - AddForm
 
 ## Demo
