@@ -73,6 +73,7 @@ function NavBar({ searchSubmit, setSearchSubmit }) {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              // uncontrolled components that maintains its own internal state
               onChange={(e) => setSearchSubmit(e.target.value)}
               value={searchSubmit}
             />

@@ -15,7 +15,7 @@ function App() {
     return element.name.toLowerCase().includes(searchSubmit);
   });
   console.log(searchTask);
-
+  //simple GET method using useEffect hook
   useEffect(() => {
     fetch("http://localhost:3000/desserts")
       .then((r) => r.json())
@@ -44,12 +44,7 @@ function App() {
         </Route>
         <Route exact path="/desserts">
           {/* control component (onMyFavList) recieves its update callback via props */}
-          <DessertContainer
-            desserts={searchTask}
-            onMyFavList={onMyFavList}
-
-            //control component, props, useState
-          />
+          <DessertContainer desserts={searchTask} onMyFavList={onMyFavList} />
         </Route>
         <Route exact path="/new">
           <DessertPop desserts={searchTask} onMyFavList={onMyFavList} />
